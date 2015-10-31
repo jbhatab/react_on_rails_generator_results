@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import createStore from '../stores/helloWorldStore';
 import HelloWorldContainer from '../components/HelloWorldContainer';
 
-const HelloWorldClientApp = props => {
+const helloWorldEntryComponent = props => {
   const store = createStore(props);
   const reactComponent = (
     <Provider store={store}>
@@ -15,4 +15,4 @@ const HelloWorldClientApp = props => {
 };
 
 // Export is needed for the hot reload server
-export default HelloWorldClientApp;
+export default helloWorldEntryComponent;
