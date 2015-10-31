@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import HelloWorld from './HelloWorld';
+import HelloWorld from '../components/HelloWorld';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Immutable from 'immutable';
@@ -10,13 +10,13 @@ function select(state) {
   return { $$helloWorldStore: state.$$helloWorldStore };
 }
 
-const HelloWorldContainer = React.createClass({
-  displayName: 'HelloWorldContainer',
+class HelloWorldContainer extends React.Component {
+  displayName = 'HelloWorldContainer';
 
-  propTypes: {
+  static PropTypes = {
     dispatch: PropTypes.func.isRequired,
     $$helloWorldStore: PropTypes.instanceOf(Immutable.Map).isRequired,
-  },
+  }
 
   render() {
     const { dispatch, $$helloWorldStore } = this.props;
@@ -24,8 +24,8 @@ const HelloWorldContainer = React.createClass({
     return (
       <HelloWorld $$helloWorldStore={$$helloWorldStore} actions={actions} />
     );
-  },
-});
+  }
+}
 
 // Don't forget to actually use connect!
 export default connect(select)(HelloWorldContainer);

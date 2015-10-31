@@ -12,10 +12,7 @@ config.entry.app.push(
 
   // Webpack dev server
   'webpack-dev-server/client?http://localhost:4000',
-  'webpack/hot/dev-server',
-
-  // App entry point
-  './app/startup/clientGlobals'
+  'webpack/hot/dev-server'
 );
 
 config.output = {

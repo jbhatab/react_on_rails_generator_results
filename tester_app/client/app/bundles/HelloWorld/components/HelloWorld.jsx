@@ -17,7 +17,7 @@ export default class HelloWorld extends React.Component {
 
   render() {
     const $$helloWorldStore = this.props.$$helloWorldStore;
-    const _handleChange = this._handleChange;
+    const _handleChange = ::this._handleChange;
     const name = $$helloWorldStore.get('name');
     return (
       <div>

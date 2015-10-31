@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import createStore from '../stores/helloWorldStore';
-import HelloWorldContainer from '../components/HelloWorldContainer';
+import createStore from '../store/helloWorldStore';
+import HelloWorldContainer from '../containers/HelloWorldContainer';
 
 const helloWorldEntryComponent = props => {
   const store = createStore(props);
